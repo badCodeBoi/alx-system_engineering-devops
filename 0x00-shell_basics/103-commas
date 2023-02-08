@@ -1,0 +1,3 @@
+#!/bin/bash
+ls -1A | sed -e 's/^\./\0\//' | sort -t. -k1.4,1n | tr '\n' ',' | sed 's/.$//;s/,/\n/g'
+
